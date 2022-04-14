@@ -1,0 +1,25 @@
+.header {
+    height: 10%;
+    background-color: rgb(0, 191, 255);
+    font-size: 1.3rem;
+    padding: rem 15%;
+}
+
+.he {
+    background-color: rgb(255, 210, 194);
+    margin: 35px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.he1 {
+    padding: .2rem 15%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+a {
+    color: black;
+}

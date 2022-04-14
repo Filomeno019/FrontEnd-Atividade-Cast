@@ -1,0 +1,31 @@
+<!--<form>
+    <h1>Criando um novo Modelo</h1>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" [(ngModel)]="modelo.marca">
+            <option value="null" disabled selected>Selecione uma marca</option>
+            <option *ngFor="let marca of marcas" value="{{marca.id}}">
+                <p>{{ marca.nome }}</p>
+            </option>
+          </select>
+        <label for="exampleInputEmail1">Nome</label>
+        <input [(ngModel)]="modelo.nome" name="nome" required matInput placeholder="Ex. 320i">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="create()">CRIAR</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </form>-->
+
+<form [formGroup]="formulario">
+    <h1>Criando um novo Modelo</h1>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" formControlName="marca">
+            <option value="null" disabled selected>Selecione uma marca</option>
+            <option *ngFor="let marca of marcas" [ngValue]="marca">
+                <p>{{ marca.nome }}</p>
+            </option>
+          </select>
+        <label for="exampleInputEmail1">Nome</label>
+        <input formControlName="nome" name="nome" required matInput placeholder="Ex. 320i">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="create()">CRIAR</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+</form>

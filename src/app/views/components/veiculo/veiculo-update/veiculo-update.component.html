@@ -1,0 +1,25 @@
+<form [formGroup]="formulario">
+    <h1>Atualizando um Veiculo</h1>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" formControlName="marca">
+            <option value="null" disabled selected></option>
+            <option *ngFor="let marca of marcas" [ngValue]="marca.id">
+                <p>{{ marca.nome }}</p>
+            </option>
+       </select>
+    </div>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" formControlName="modelo">
+            <option value="null" disabled selected></option>
+            <option *ngFor="let modelo of modelos" [ngValue]="modelo.id">
+                <p>{{ modelo.nome }}</p>
+            </option>
+        </select>
+    </div>
+    <div class="form-group form bg-secondary text-white">
+        <label for="exampleInputEmail1">Valor</label>
+        <input [(ngModel)]="veiculo.valor" name="valor" required matInput placeholder="Ex. R$ 100.000,00">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="update()">Atualizar</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+</form>

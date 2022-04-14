@@ -1,0 +1,19 @@
+    .home {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .mat-card {
+        color: black;
+    }
+    
+    .mat-card-subtitle {
+        color: black;
+    }
+    
+    button {
+        margin: 1rem auto 0 1rem
+    }
+    
+    img {
+        text-align: center;
+    }

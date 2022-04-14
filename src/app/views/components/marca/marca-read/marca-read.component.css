@@ -1,0 +1,49 @@
+.marca {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.criar {
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.buscar {
+    position: absolute;
+    top: 50px;
+    right: 65px;
+    margin: 35px;
+    padding: 4px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.atualizar {
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    margin: 35px;
+    padding: 4px;
+    font-size: 1.2rem;
+    color: white;
+}

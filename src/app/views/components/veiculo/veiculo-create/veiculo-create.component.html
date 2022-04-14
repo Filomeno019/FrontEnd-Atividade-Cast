@@ -1,0 +1,29 @@
+<!-- <form>
+    <h1>Criando um novo Modelo</h1>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" [(ngModel)]="veiculo.modelo">
+            <option *ngFor="let modelo of modelos" value="{{modelo.id}}">
+                <p>{{ modelo.nome }}</p>
+            </option>
+          </select>
+        <label for="exampleInputEmail1">Nome</label>
+        <input [(ngModel)]="veiculo.valor" name="valor" required matInput placeholder="Ex. R$ 100.00,00">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="create()">CRIAR</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>-->
+
+<form [formGroup]="formulario">
+    <h1>Criando um novo Veiculo</h1>
+    <div class="form-group form bg-secondary text-white">
+        <select class="form-control" type="number" formControlName="modelo">
+                <option value="null" disabled selected>Selecione um modelo</option>
+                <option *ngFor="let modelo of modelos" [ngValue]="modelo">
+                    <p>{{ modelo.nome }}</p>
+                </option>
+              </select>
+        <label for="exampleInputEmail1">Valor</label>
+        <input formControlName="valor" name="valor" required matInput placeholder="Ex. R$ 100.000,00">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="create()">CRIAR</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+</form>

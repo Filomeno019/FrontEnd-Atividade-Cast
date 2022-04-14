@@ -1,0 +1,9 @@
+<form>
+    <h1>Criando uma nova Marca</h1>
+    <div class="form-group form bg-secondary text-white">
+        <label for="exampleInputEmail1">Nome</label>
+        <input [(ngModel)]="marcas.nome" name="nome" [formControl]="nome" required matInput placeholder="Ex. Ford">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!habilitaCampo()" (click)="create()">CRIAR</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+</form>

@@ -1,0 +1,9 @@
+<form>
+    <h1>Apagando uma Marca</h1>
+    <div class="form-group form">
+        <label for="exampleInputEmail1">Nome</label>
+        <input [(ngModel)]="marcas.nome" name="nome" disabled>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="delete()">Deletar</button>
+    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+</form>

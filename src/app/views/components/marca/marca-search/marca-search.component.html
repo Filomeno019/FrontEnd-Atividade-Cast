@@ -1,0 +1,21 @@
+<form>
+    <h1> Buscar Marca</h1>
+    <div class="form-group form">
+        <label>  Nome  </label>
+        <input [(ngModel)]="nome" name="nome" required matInput placeholder="Ex. Ford">
+        <button class="mat-elevation-z8" (click)="callingNewMethod()" mat-stroked-button color="accent">Buscar</button>
+        <button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+    </div>
+    <div class="mat-elevation-z8 full-width marca">
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef>Nome</th>
+                <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[2, 5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</form>

@@ -1,0 +1,10 @@
+<form [formGroup]="formulario">
+    <h1>Atualizando uma Marca</h1>
+    <div class="form-group form">
+        <label>  Nome  </label>
+        <input [(ngModel)]="marca.nome" name="nome" required matInput placeholder="Ex. Ford">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="update()">Atualizar</button>
+    <button type=" submit " class="btn btn-danger " (click)="cancel() ">Cancelar</button>
+</form>
